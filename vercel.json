@@ -1,0 +1,14 @@
+{
+    "functions": {
+        "src/index.js": {
+            "runtime": "edge"
+        }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/src/index.js"
+        }
+    ],
+    "name": "proxy-worker"
+}
