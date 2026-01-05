@@ -1,13 +1,8 @@
 {
-    "functions": {
-        "src/index.js": {
-            "runtime": "edge"
-        }
-    },
-    "routes": [
+    "rewrites": [
         {
-            "src": "/(.*)",
-            "dest": "/src/index.js"
+            "source": "/(.*)",
+            "destination": "/api/index.js"
         }
     ],
     "name": "proxy-worker"
