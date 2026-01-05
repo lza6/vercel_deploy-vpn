@@ -1,5 +1,8 @@
 import { getPageHtml } from './ui.js';
-import { connect as rawConnect } from 'cloudflare:sockets';
+// import { connect as rawConnect } from 'cloudflare:sockets'; // Unsupported on Vercel
+function rawConnect(options) {
+    throw new Error("TCP Sockets (cloudflare:sockets) are not supported on Vercel Edge Runtime.");
+}
 
 let at = 'd2b5ce3b-67f1-4bb2-93ac-15c9e2a786e2';
 let fallbackAddress = '';
